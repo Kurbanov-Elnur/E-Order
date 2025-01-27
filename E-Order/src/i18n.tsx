@@ -32,7 +32,7 @@ i18n
     })
     .then(() => {
     })
-    .catch((err) => {
+    .catch(() => {
     });
 
 export default i18n;
