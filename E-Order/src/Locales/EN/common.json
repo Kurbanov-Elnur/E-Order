@@ -1,0 +1,19 @@
+{
+  "Auth": {
+    "Welcome": "Welcome!",
+    "SignIn": "Log in to your personal account",
+    "SignUp": "Sign Up",
+    "Username": "Username",
+    "Password": "Password",
+    "FirstName": "Name",
+    "LastName": "Surname",
+    "Email": "Email",
+    "PhoneNumber": "Phone number",
+    "Description": "Description",
+    "RememberMe": "Remember Me",
+    "ForgotPassword": "Forgot Password?",
+    "Video": "How to get API keys from Binance?",
+    "NoAccountText": "Don't have an account?",
+    "HasAccountText": "Already have an account?"
+  }
+}

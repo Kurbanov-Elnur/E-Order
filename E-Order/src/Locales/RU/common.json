@@ -1,0 +1,19 @@
+{
+  "Auth": {
+    "Welcome": "Добро пожаловать!",
+    "SignIn": "Войдите в личный кабинет",
+    "SignUp": "Зарегистрироваться",
+    "Username": "Имя пользователя",
+    "Password": "Пароль",
+    "FirstName": "Имя",
+    "LastName": "Фамилия",
+    "Email": "Электронная почта",
+    "PhoneNumber": "Номер телефона",
+    "Description": "Описание",
+    "RememberMe": "Запомнить Меня",
+    "ForgotPassword": "Забыли пароль?",
+    "Video": "Как получить API-ключи на Binance?",
+    "NoAccountText": "Нет аккаунта?",
+    "HasAccountText": "Уже есть аккаунт?"
+  }
+}

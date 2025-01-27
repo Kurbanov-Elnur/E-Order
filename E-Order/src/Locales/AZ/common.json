@@ -1,0 +1,19 @@
+{
+    "Auth": {
+        "Welcome": "Xoş gəlmisiniz!",
+        "SignIn": "Şəxsi kabinetinizə daxil olun",
+        "SignUp": "Qeydiyyatdan Keçin",
+        "Username": "İstifadəçi adı",
+        "Password": "Şifrə",
+        "FirstName": "Ad",
+        "LastName": "Soyad",
+        "Email": "E-poçt",
+        "PhoneNumber": "Telefon nömrəsi",
+        "Description": "Mətn",
+        "RememberMe": "Məni Yadda Saxla",
+        "ForgotPassword": "Şifrəni Unutmusunuz?",
+        "Video": "Binancedən API açarlarını necə əldə etmək olar?",
+        "NoAccountText": "Hesabınız Yoxdur?",
+        "HasAccountText": "Artıq hesabınız var?"
+    }
+}
