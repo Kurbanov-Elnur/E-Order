@@ -1,6 +1,7 @@
 import './Auth.scss';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Lottie from "lottie-react"
 
@@ -14,6 +15,15 @@ export default function Auth() {
   const authState = useSelector((state: RootState) => state.Auth);
   const { t } = useTranslation("common");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    dispatch(authSlice.setIsLoading(true)); 
+    setTimeout(() => {
+      dispatch(authSlice.setIsLoading(false)); 
+      navigate('/app/search');
+    }, 2000); 
+  };
 
   return (
     <div className='auth'>
@@ -189,7 +199,7 @@ export default function Auth() {
         <button
           className="signİnUpBtn"
           disabled={authState.isLoading}
-          onClick={() => { dispatch(authSlice.setIsLoading(true)) }}
+          onClick={handleButtonClick}
         >
           {authState.isLoading ? (
             <Lottie className="btnAnimation" animationData={animationData} />

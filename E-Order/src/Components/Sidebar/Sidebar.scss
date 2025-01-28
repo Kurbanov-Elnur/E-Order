@@ -1,0 +1,215 @@
+.sidebar-container {
+    position: relative;
+    height: 100%;
+    z-index: 9999;
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: #021321;
+        padding: 0.625rem;
+        transition: all 0.5s;
+
+        &.expanded {
+            width: 12rem;
+        }
+
+        &.collapsed {
+            width: 3rem;
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+
+            .sidebar-title {
+                display: flex;
+                align-items: center;
+                transition: opacity 0.4s;
+                color: #ffffff;
+
+                &.show {
+                    opacity: 1;
+                }
+
+                &.hide {
+                    opacity: 0;
+                }
+
+                .icon {
+                    font-size: 1.25rem;
+                    margin-right: 0.5rem;
+                }
+
+                span {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+
+            .toggle-btn {
+                position: absolute;
+                top: 1000;
+                left: 50%;
+                background-color: transparent;
+                border: none;
+                color: #ffffff;
+                font-size: 1.25rem;
+                transform: translateX(-50%);
+                transition: all 0.5s;
+                cursor: pointer;
+
+                &.expanded {
+                    left: 90%;
+                }
+            }
+        }
+
+        .sidebar-menu {
+            margin-top: 1.25rem;
+            list-style: none;
+
+            .menu-item {
+                position: relative;
+                margin-top: 0.3rem;
+
+                .menu-link {
+                    display: flex;
+                    align-items: center;
+                    color: #ffffff;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    transition: all 0.4s;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: #023854;
+                        color: #ffffff;
+                    }
+
+                    .menu-icon {
+                        margin: 0.5rem;
+                        min-width: 3.125rem;
+                    }
+
+                    &.active {
+                        background-color: #023854;
+                        color: #ffffff;
+
+                        .menu-icon {
+                            color: #ffffff;
+                        }
+                    }
+
+                    .menu-text {
+                        transition: opacity 0.4s;
+
+                        &.show {
+                            opacity: 1;
+                        }
+
+                        &.hide {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                .tooltip {
+                    position: absolute;
+                    left: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-left: 1.25rem;
+                    background-color: #11101D;
+                    color: #ffffff;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+                    white-space: nowrap;
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                }
+
+                &:hover .tooltip {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 2rem;
+            display: flex;
+            align-items: center;
+
+            .profile-img {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 0.5rem;
+                object-fit: cover;
+            }
+
+            .profile-info {
+                margin-left: 0.5rem;
+                transition: opacity 0.4s;
+
+                &.show {
+                    opacity: 1;
+                }
+
+                &.hide {
+                    opacity: 0;
+                }
+
+                .profile-name {
+                    color: #ffffff;
+                    font-size: 0.875rem;
+                }
+
+                .profile-role {
+                    color: #94a3b8;
+                    font-size: 0.75rem;
+                }
+            }
+
+            .logout-btn {
+                margin-left: 15%;
+                color: #ffffff;
+                font-size: 1.25rem;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                &.show {
+                    opacity: 1;
+                }
+
+                &.hide {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .main-content {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: all 0.5s;
+
+        &.expanded {
+            left: 13rem;
+            width: calc(100% - 13rem);
+        }
+
+        &.collapsed {
+            left: 4rem;
+            width: calc(100% - 4rem);
+        }
+    }
+}

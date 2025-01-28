@@ -15,5 +15,16 @@
         "Video": "Binancedən API açarlarını necə əldə etmək olar?",
         "NoAccountText": "Hesabınız Yoxdur?",
         "HasAccountText": "Artıq hesabınız var?"
+    },
+    "Sidebar": {
+        "Item-1": "Axtarış",
+        "Item-2": "Sifarişlər səbəti",
+        "Item-3": "Sifariş tarixçəsi",
+        "Item-4": "Məktublar",
+        "Item-5": "Aksiyalar və elanlar",
+        "Item-6": "Brendlər haqqında",
+        "Item-7": "E-Kataloq",
+        "Item-8": "Məlumat",
+        "Item-9": "Outlet"
     }
 }

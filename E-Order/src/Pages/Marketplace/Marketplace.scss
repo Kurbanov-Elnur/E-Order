@@ -1,0 +1,13 @@
+.marketplace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2C3E50;
+
+    .brand-search {
+        width: 95%;
+        height: 60vh;
+        background-color: black;
+    }
+}

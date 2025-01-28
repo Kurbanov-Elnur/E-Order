@@ -15,5 +15,16 @@
     "Video": "How to get API keys from Binance?",
     "NoAccountText": "Don't have an account?",
     "HasAccountText": "Already have an account?"
+  },
+  "Sidebar": {
+    "Item-1": "Search",
+    "Item-2": "Shopping Cart",
+    "Item-3": "Order History",
+    "Item-4": "Messages",
+    "Item-5": "Promotions and Announcements",
+    "Item-6": "About Brands",
+    "Item-7": "E-Catalog",
+    "Item-8": "Information",
+    "Item-9": "Outlet"
   }
 }

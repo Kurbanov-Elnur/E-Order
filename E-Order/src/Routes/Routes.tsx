@@ -1,20 +1,69 @@
 import App from '../App';
 import Auth from '../Pages/Auth/Auth';
+import Marketplace from '../Pages/Marketplace/Marketplace';
+import PrivateRoute from './PrivateRoute';
+
+const isAuthenticated = true;
+const hasPermission = true;
 
 const appRoutes = [
     {
-        path: 'auth',
-        element: <Auth />
+        path: 'search',
+        element: <Marketplace />,
+    },
+    {
+        path: 'shopping-cart',
+        element: <Marketplace />,
+    },
+    {
+        path: 'order-history',
+        element: <Marketplace />,
+    },
+    {
+        path: 'messages',
+        element: <Marketplace />,
+    },
+    {
+        path: 'promotions-announcements',
+        element: <Marketplace />,
+    },
+    {
+        path: 'about-brands',
+        element: <Marketplace />,
+    },
+    {
+        path: 'e-catalog',
+        element: <Marketplace />,
+    },
+    {
+        path: 'information',
+        element: <Marketplace />,
+    },
+    {
+        path: 'outlet',
+        element: <Marketplace />,
     }
 ];
 
 const app = [
     {
-        element: <App />,
+        path: '/app',
+        element: (
+            <PrivateRoute
+                isAuthenticated={isAuthenticated}
+                hasPermission={hasPermission}
+            >
+                <App />
+            </PrivateRoute>
+        ),
         children: appRoutes
     },
     {
         path: '/',
+        element: <Auth />,
+    },
+    {
+        path: 'auth',
         element: <Auth />
     }
 ]
