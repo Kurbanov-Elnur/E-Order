@@ -23,7 +23,8 @@
         flex-direction: column;
         width: 30%;
         height: 70%;
-        backdrop-filter: blur(10px);
+        background-color: rgba(2, 37, 49, 0.5);
+        backdrop-filter: blur(16px);
         border-radius: 30px;
 
         &.register-form {
@@ -214,7 +215,7 @@
                     transition: all 0.3s ease;
 
                     &:hover {
-                        color: #1C515E;
+                        color: #022531;
                     }
                 }
             }
