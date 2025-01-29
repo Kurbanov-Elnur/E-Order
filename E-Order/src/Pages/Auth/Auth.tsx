@@ -31,8 +31,8 @@ export default function Auth() {
 
       <div className='overlay'></div>
       <div className={`form ${authState.isRegister ? "register-form" : ""}`}>
-        <h2>{t("Auth.Welcome")}</h2>
-        <h1>{t("Auth.SignIn")}</h1>
+        <h4>{t("Auth.Welcome")}</h4>
+        <h3>{t("Auth.SignIn")}</h3>
         <div className={`inputs-container ${authState.isRegister ? "register-container" : ""}`}>
           {/* Login */}
           {!authState.isRegister &&

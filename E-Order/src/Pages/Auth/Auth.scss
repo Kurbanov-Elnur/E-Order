@@ -22,19 +22,19 @@
     .form {
         display: flex;
         flex-direction: column;
-        width: 30%;
-        height: 60%;
+        width: 400px;
+        height: 400px;
         background-color: rgba(2, 37, 49, 0.5);
         backdrop-filter: blur(16px);
         border-radius: 30px;
 
         &.register-form {
-            width: 40%;
-            height: 80%;
+            width: 500px;
+            height: 520px;
         }
 
-        h1,
-        h2 {
+        h3,
+        h4 {
             margin-top: 15px;
             color: #ffffff;
             text-align: center;
@@ -44,10 +44,11 @@
             margin-top: 10%;
 
             &.register-container {
+                padding: 0.5rem;
                 margin-top: 5%;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 1rem;
+                gap: 0.5rem;
 
                 @media (max-width: 768px) {
                     display: flex;
@@ -212,7 +213,6 @@
 
                 a {
                     color: #ffffff;
-                    font-weight: bold;
                     margin-left: 0.25rem;
                     cursor: pointer;
                     transition: all 0.3s ease;
@@ -224,98 +224,4 @@
             }
         }
     }   
-
-    @media (max-width: 1440px) {
-        .auth {
-            .form {
-                width: 25%;
-                height: 60%;
-                border-radius: 40px;
-
-                &.register-form {
-                    width: 35%;
-                    height: 55%;
-                }
-
-                h1,
-                h2 {
-                    font-size: 2rem;
-                }
-
-                .inputs-container {
-                    margin-top: 15%;
-
-                    &.register-container {
-                        margin-top: 8%;
-                        gap: 1.5rem;
-                    }
-                }
-
-                .input-container .input {
-                    font-size: 1.125rem;
-                    padding: 1.25rem;
-                }
-
-                .signİnUpBtn {
-                    width: 50%;
-                    font-size: 1.125rem;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .form {
-            width: 50%;
-            height: 50%;
-
-            &.register-form {
-                width: 60%;
-                height: 65%;
-            }
-        }
-    }
-
-    @media (max-width: 768px) {
-        .form {
-            width: 70%;
-            height: 50%;
-
-            &.register-form {
-                width: 80%;
-                height: 90%;
-            }
-
-            .inputs-container {
-                &.register-container {
-                    grid-template-columns: 1fr;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 480px) {
-        .form {
-            width: 90%;
-            height: 45%;
-
-            h1,
-            h2 {
-                font-size: 1.25rem;
-            }
-
-            .inputs-container {
-                margin-top: 10%;
-            }
-
-            .signİnUpBtn {
-                width: 80%;
-                font-size: 0.875rem;
-            }
-        }
-
-        .form.register-form {
-            height: 70%;
-        }
-    }
 }
