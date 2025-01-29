@@ -10,7 +10,7 @@
         height: 100%;
         background-color: #021321;
         padding: 0.625rem;
-        transition: all 0.5s;
+        transition: width 0.5s;
 
         &.expanded {
             width: 12rem;
@@ -30,6 +30,9 @@
                 align-items: center;
                 transition: opacity 0.4s;
                 color: #ffffff;
+                word-wrap: break-word; 
+                min-width: 6rem;
+                max-width: 8rem;
 
                 &.show {
                     opacity: 1;
@@ -47,6 +50,9 @@
                 span {
                     font-size: 1.5rem;
                     font-weight: 400;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
                 }
             }
 
@@ -84,6 +90,7 @@
                     border-radius: 0.5rem;
                     transition: all 0.4s;
                     text-decoration: none;
+                    overflow: hidden;
 
                     &:hover {
                         background-color: #023854;
@@ -105,7 +112,13 @@
                     }
 
                     .menu-text {
-                        transition: opacity 0.4s;
+                        display: block;
+                        white-space: normal;
+                        word-wrap: break-word;
+                        overflow: hidden;
+                        min-width: 8rem;
+                        max-width: 10rem;
+                        transition: min-width 0.5s, max-width 0.5s, opacity 0.4s;
 
                         &.show {
                             opacity: 1;
@@ -157,6 +170,8 @@
             .profile-info {
                 margin-left: 0.5rem;
                 transition: opacity 0.4s;
+                min-width: 6rem; 
+                max-width: 8rem; 
 
                 &.show {
                     opacity: 1;
@@ -169,11 +184,17 @@
                 .profile-name {
                     color: #ffffff;
                     font-size: 0.875rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
                 }
 
                 .profile-role {
                     color: #94a3b8;
                     font-size: 0.75rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
 
