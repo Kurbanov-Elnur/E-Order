@@ -4,3 +4,17 @@
     user-select: none;
     font-family: Tahoma, sans-serif;
 }
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #021321;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #023854;
+    border-radius: 10px;
+}

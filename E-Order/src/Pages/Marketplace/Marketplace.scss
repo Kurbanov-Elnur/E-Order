@@ -1,13 +1,142 @@
+$primary-color: #3ec9a7;
+$secondary-color: #ffcb42;
+$dark-blue: #1c3d5a;
+$light-gray: #e0e4e8;
+$text-dark: #1c3d5a;
+$text-light: #fff;
+
 .marketplace {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
     background-color: #2C3E50;
+    gap: 1.5rem;
 
-    .brand-search {
+    .search-container {
+        width: 95%;
+        height: 20vh;
+        background-color: $light-gray;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        .search-icon {
+            margin-left: 10px;
+            width: 60px;
+            height: 60px;
+            background-color: $primary-color;
+            color: $text-light;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            border-radius: 50%;
+        }
+
+        .search-content {
+            flex: 1;
+            margin-left: 1rem;
+
+            h2 {
+                color: $text-dark;
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                width: 80%;
+                padding: 0.8rem;
+                border: 2px solid $primary-color;
+                border-radius: 10px;
+                outline: none;
+                font-size: 1rem;
+                transition: border-color 0.3s ease;
+
+                &:focus {
+                    border-color: darken($primary-color, 10%);
+                }
+            }
+
+            button {
+                padding: 0.8rem 1.2rem;
+                background-color: $secondary-color;
+                color: $text-dark;
+                font-weight: bold;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background 0.3s ease, transform 0.2s ease;
+                margin-left: 10px;
+
+                &:hover {
+                    background-color: darken($secondary-color, 10%);
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .search-results {
         width: 95%;
         height: 60vh;
-        background-color: black;
+        background-color: $light-gray;
+        border-radius: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .search-container {
+            height: 10vh;
+
+            .search-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .search-content {
+                h2 {
+                    font-size: 1rem;
+                }
+
+                input {
+                    width: 60%;
+                    font-size: 0.6rem;
+                }
+
+                button {
+                    padding: 0.5rem 0.7rem;
+
+                }
+            }
+        }
+    }
+
+    @media (max-width: 420px) {
+        .search-container {
+            height: 10vh;
+
+            .search-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .search-content {
+                h2 {
+                    font-size: 0.7rem;
+                }
+
+                input {
+                    width: 50%;
+                    font-size: 0.5rem;
+                }
+
+                button {
+                    padding: 0.4rem 0.5rem;
+
+                }
+            }
+        }
     }
 }
