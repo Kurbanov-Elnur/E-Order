@@ -129,26 +129,6 @@
                         }
                     }
                 }
-
-                .tooltip {
-                    position: absolute;
-                    left: 100%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    margin-left: 1.25rem;
-                    background-color: #11101D;
-                    color: #ffffff;
-                    padding: 0.25rem 0.5rem;
-                    border-radius: 0.5rem;
-                    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-                    white-space: nowrap;
-                    opacity: 0;
-                    transition: opacity 0.5s;
-                }
-
-                &:hover .tooltip {
-                    opacity: 1;
-                }
             }
         }
 
@@ -233,4 +213,27 @@
             width: calc(100% - 4rem);
         }
     }
+
+    @media (max-width: 550px) {
+        .sidebar {
+            position: fixed;
+            left: 0;
+            width: 12rem;
+            z-index: 10000;
+            transform: translateX(0%); 
+            transition: width 0.5s;
+    
+            &.expanded {
+                transform: translateX(0);
+            }
+        }
+    
+        .main-content {
+            left: 4rem !important;
+
+            &.expanded {
+                width: calc(100% - 4rem);
+            }
+        }
+    }    
 }

@@ -55,7 +55,6 @@ export default function Sidebar() {
                                     {item.name}
                                 </span>
                             </Link>
-                            {!sidebarState.isActive && <span className="tooltip">{item.name}</span>}
                         </li>
                     ))}
                 </ul>

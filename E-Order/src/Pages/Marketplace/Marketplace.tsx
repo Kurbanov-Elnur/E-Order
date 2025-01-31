@@ -1,12 +1,9 @@
-import LanguageSwitcher from '../../Components/LanguageSwitcher/LanguageSwitcher'
 import './Marketplace.scss'
 
 export default function Marketplace() {
   
   return (
     <div className='marketplace'>
-      <LanguageSwitcher />
-
       <div className="search-container">
         <i className='bx bx-search search-icon'></i>
         <div className="search-content">

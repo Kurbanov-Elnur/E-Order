@@ -10,7 +10,7 @@ $text-light: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 100vh;
     background-color: #2C3E50;
     gap: 1.5rem;
 
@@ -56,7 +56,7 @@ $text-light: #fff;
                 transition: border-color 0.3s ease;
 
                 &:focus {
-                    border-color: darken($primary-color, 10%);
+                    border-color: #37b093;
                 }
             }
 
@@ -72,7 +72,7 @@ $text-light: #fff;
                 margin-left: 10px;
 
                 &:hover {
-                    background-color: darken($secondary-color, 10%);
+                    background-color: #e6b639;
                     transform: scale(1.05);
                 }
             }
