@@ -10,9 +10,90 @@ $text-light: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #2C3E50;
     gap: 1.5rem;
+
+    .buttons-container {
+        width: 95%;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 33%;
+            height: 90px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            padding: 10px;
+
+            @media (max-width: 768px) {
+                width: 70%;
+            }
+
+            &.green {
+                background-color: $primary-color;
+                color: $text-light;
+            }
+
+            &.yellow {
+                background-color: $secondary-color;
+                color: $text-dark;
+            }
+
+            &.blue {
+                background-color: $dark-blue;
+                color: $text-light;
+            }
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                color: white;
+                margin-left: 10px;
+            }
+
+            .text {
+                flex: 1;
+                padding-left: 15px;
+                text-align: left;
+
+                strong {
+                    display: block;
+                    font-size: 1.1rem;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                    opacity: 0.8;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
 
     .search-container {
         width: 95%;

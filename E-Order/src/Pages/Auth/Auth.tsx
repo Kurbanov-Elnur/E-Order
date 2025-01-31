@@ -29,7 +29,7 @@ export default function Auth() {
     <div className='auth'>
       <LanguageSwitcher />
 
-      <div className='overlay'></div>
+      <div className='overlay'/>
       <div className={`form ${authState.isRegister ? "register-form" : ""}`}>
         <h4>{t("Auth.Welcome")}</h4>
         <h3>{t("Auth.SignIn")}</h3>

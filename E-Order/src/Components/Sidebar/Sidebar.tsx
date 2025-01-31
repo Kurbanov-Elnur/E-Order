@@ -1,14 +1,13 @@
 import profileImg from '../../Assets/Images/DefaultProfileImage.jpg';
-import { AppDispatch, RootState } from '../../Store/Store';
-import * as sidebarSlice from '../../Store/Reducers/SidebarSlice';
-import { useDispatch, useSelector } from 'react-redux';
+
+import { RootState } from '../../Store/Store';
+import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { Link, Outlet, useLocation } from "react-router-dom";
 import './Sidebar.scss'
 
 export default function Sidebar() {
     const sidebarState = useSelector((state: RootState) => state.Sidebar);
-    const dispatch = useDispatch<AppDispatch>();
     const location = useLocation();
     const { t } = useTranslation("common");
 
@@ -32,17 +31,16 @@ export default function Sidebar() {
         <div className="sidebar-container">
             <div className={`sidebar ${sidebarState.isActive ? "expanded" : "collapsed"}`}>
                 <div className="sidebar-header">
-                    <div className={`sidebar-title ${sidebarState.isActive ? "show" : "hide"}`}>
-                        <i className='bx bx-store-alt icon'></i>
-                        <span>E-Sifariş</span>
+                    <img src={profileImg} alt="Profile" className="profile-img" />
+                    <div className={`profile-info ${sidebarState.isActive ? "show" : "hide"}`}>
+                        <p className="profile-name">Elnur Mamedov</p>
+                        <p className="profile-role">Müştəri</p>
                     </div>
-                    <button
-                        className={`toggle-btn ${sidebarState.isActive ? "expanded" : "collapsed"}`}
-                        onClick={() => dispatch(sidebarSlice.setIsActive())}
-                    >
-                        <i className="bx bx-menu"></i>
-                    </button>
+                    <Link to='/auth' className={`logout-btn ${sidebarState.isActive ? "show" : "hide"}`}>
+                        <i className="bx bx-log-out"></i>
+                    </Link>
                 </div>
+
                 <ul className="sidebar-menu">
                     {sideBarItems.map((item, index) => (
                         <li
@@ -58,16 +56,6 @@ export default function Sidebar() {
                         </li>
                     ))}
                 </ul>
-                <div className="sidebar-footer">
-                    <img src={profileImg} alt="Profile" className="profile-img" />
-                    <div className={`profile-info ${sidebarState.isActive ? "show" : "hide"}`}>
-                        <p className="profile-name">Elnur Mamedov</p>
-                        <p className="profile-role">Müştəri</p>
-                    </div>
-                    <Link to='/auth' className={`logout-btn ${sidebarState.isActive ? "show" : "hide"}`}>
-                        <i className="bx bx-log-out"></i>
-                    </Link>
-                </div>
             </div>
             <div className={`main-content ${sidebarState.isActive ? "expanded" : "collapsed"}`}>
                 <Outlet />

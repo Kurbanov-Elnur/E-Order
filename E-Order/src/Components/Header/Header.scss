@@ -1,0 +1,112 @@
+$primary-color: #021321;
+$accent-color: #ffcb42;
+$button-bg: #3ec9a7;
+$button-hover: #2fa387;
+$text-color: white;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 7px;
+    background-color: $primary-color;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: $text-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+
+    .profile-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: bold;
+
+            .icon {
+                font-size: 24px;
+                color: $accent-color;
+            }
+        }
+    }
+
+    .toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: $button-bg;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+
+        i {
+            font-size: 22px;
+            color: $text-color;
+        }
+
+        &:hover {
+            background-color: $button-hover;
+        }
+
+        &.expanded {
+            transform: rotate(90deg);
+        }
+
+        &.collapsed {
+            transform: rotate(0deg);
+        }
+    }
+
+    .language-switcher {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        background: #f5f5f5;
+        border-radius: 8px;
+        top: 0;
+        margin-top: 3px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:nth-child(1) {
+                background: #3ec9a7;
+                color: white;
+            }
+
+            &:nth-child(2) {
+                background: #ffcb42;
+                color: #333;
+            }
+
+            &:nth-child(3) {
+                background: #1c3d5a;
+                color: white;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+    }
+}
