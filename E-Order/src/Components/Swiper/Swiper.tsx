@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import 'swiper/swiper-bundle.css';
+
 import './Swiper.scss';
 import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
 
