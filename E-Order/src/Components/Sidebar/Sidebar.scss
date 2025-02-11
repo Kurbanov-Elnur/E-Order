@@ -11,6 +11,7 @@
         background-color: #021321;
         padding: 0.625rem;
         transition: width 0.5s;
+        width: 12rem;
 
         &.expanded {
             width: 12rem;
@@ -18,6 +19,11 @@
 
         &.collapsed {
             width: 3rem;
+
+            .menu-text,
+            .profile-info {
+                display: none;
+            }
         }
 
         .sidebar-header {
@@ -94,7 +100,7 @@
             margin-top: 1.25rem;
             list-style: none;
             max-height: calc(100% - 5rem);
-            overflow-y: auto;
+            padding: 0;
 
             &::-webkit-scrollbar {
                 display: none;
@@ -110,7 +116,7 @@
                     color: #ffffff;
                     padding: 0.5rem;
                     border-radius: 0.5rem;
-                    transition: all 0.4s;
+                    transition: background-color 0.4s, color 0.4s;
                     text-decoration: none;
                     overflow: hidden;
 
@@ -151,24 +157,28 @@
                         }
                     }
                 }
+
+                .tooltip {
+                    position: absolute;
+                    left: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-left: 1.25rem;
+                    background-color: #11101D;
+                    color: #e2e8f0;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+                    white-space: nowrap;
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                    z-index: 50000;
+                }
+
+                .menu-link:hover+.tooltip {
+                    opacity: 1;
+                }
             }
-        }
-    }
-
-    .main-content {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        transition: all 0.5s;
-
-        &.expanded {
-            left: 13.2rem;
-            width: calc(100% - 13.2rem);
-        }
-
-        &.collapsed {
-            left: 4.2rem;
-            width: calc(100% - 4.2rem);
         }
     }
 
@@ -176,21 +186,12 @@
         .sidebar {
             position: fixed;
             left: 0;
-            width: 12rem;
             z-index: 10000;
             transform: translateX(0%);
             transition: width 0.5s;
 
             &.expanded {
                 transform: translateX(0);
-            }
-        }
-
-        .main-content {
-            left: 4.2rem !important;
-
-            &.expanded {
-                width: calc(100% - 4.2rem);
             }
         }
     }

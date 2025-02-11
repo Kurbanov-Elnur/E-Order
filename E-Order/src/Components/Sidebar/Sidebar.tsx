@@ -3,7 +3,7 @@ import profileImg from '../../Assets/Images/DefaultProfileImage.jpg';
 import { RootState } from '../../Store/Store';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import './Sidebar.scss'
 
 export default function Sidebar() {
@@ -53,12 +53,10 @@ export default function Sidebar() {
                                     {item.name}
                                 </span>
                             </Link>
+                            {!sidebarState.isActive && <span className="tooltip">{item.name}</span>}
                         </li>
                     ))}
                 </ul>
-            </div>
-            <div className={`main-content ${sidebarState.isActive ? "expanded" : "collapsed"}`}>
-                <Outlet />
             </div>
         </div>
     );
