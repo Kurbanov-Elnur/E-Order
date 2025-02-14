@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LanguageSwitcher from '../../Components/LanguageSwitcher/LanguageSwitcher';
 import './Auth.scss';
 import 'boxicons/css/boxicons.min.css';
@@ -37,7 +38,7 @@ export default function Auth() {
             <a href='#'>Forgot Password?</a>
           </div>
 
-          <button className='login-button'>Log in</button>
+          <Link to={'search'} className='login-button'>Log in</Link>
 
           <div className='register-link'>
             <span>Don't have an account?</span> <a href='#'>Sign Up</a>
