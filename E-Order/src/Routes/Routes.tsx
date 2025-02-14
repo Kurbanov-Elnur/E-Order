@@ -1,6 +1,8 @@
 import App from '../App';
 import Auth from '../Pages/Auth/Auth';
 import Marketplace from '../Pages/Marketplace/Marketplace';
+import OrderHistory from '../Pages/OrderHistory/OrderHistory';
+import ShoppingCart from '../Pages/ShoppingCart/ShoppingCart';
 import PrivateRoute from './PrivateRoute';
 
 const isAuthenticated = true;
@@ -13,11 +15,11 @@ const appRoutes = [
     },
     {
         path: 'shopping-cart',
-        element: <Marketplace />,
+        element: <ShoppingCart />,
     },
     {
         path: 'order-history',
-        element: <Marketplace />,
+        element: <OrderHistory />,
     },
     {
         path: 'messages',

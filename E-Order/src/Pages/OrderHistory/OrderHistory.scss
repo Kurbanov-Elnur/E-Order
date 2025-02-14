@@ -1,0 +1,103 @@
+$primary-color: #3ec9a7;
+$secondary-color: #ffcb42;
+$dark-blue: #1c3d5a;
+$light-gray: #e0e4e8;
+$text-dark: #1c3d5a;
+$text-light: #fff;
+
+.order-history {
+    display: flex;
+    min-height: calc(100vh - 6rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C3E50;
+    gap: 1.5rem;
+    padding-top: 3rem;
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 5%;
+        width: 95%;
+        background-color: $light-gray;
+        border-radius: 20px;
+
+        h2 {
+            color: $text-dark;
+            font-size: 1.2rem;
+            margin: 0.8rem;
+        }
+
+        .search {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+
+            input {
+                width: 100%;
+                padding: 0.8rem;
+                border: 2px solid $primary-color;
+                border-radius: 10px;
+                outline: none;
+                font-size: 1rem;
+                margin: 0.8rem;
+
+                &:focus {
+                    border-color: #37b093;
+                }
+            }
+
+            button {
+                width: 100px;
+                height: 50px;
+                padding: 0.8rem;
+                background-color: $secondary-color;
+                color: $text-dark;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                transition: background 0.3s ease, transform 0.2s ease;
+                border-radius: 10px;
+
+                &:hover{
+                    background-color: #e6b639;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        h3 {
+            color: $text-dark;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .results-table {
+            width: 100%;
+            overflow-x: auto;
+            max-height: 30rem;
+            overflow-y: auto;
+
+            table {
+                width: 97.5%;
+                min-width: 720px; 
+                border-collapse: collapse;
+            }
+        }
+
+        .results-table::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (max-width: 768px) {}
+
+        @media (max-width: 420px) {}
+    }
+}

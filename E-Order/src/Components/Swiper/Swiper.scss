@@ -6,21 +6,24 @@
 
 .toggle-button {
     background-color: #3ec9a7;
-    color: var(--white);
-    padding: 0.5rem 1rem;
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 0 5px rgba(62, 201, 167, 0.6); // мягкое свечение
 
     &:hover {
-        background-color: #3ec9a7;
-        transform: scale(1.05);
+        background-color: #34b196;
+        transform: scale(1.03);
+        box-shadow: 0 0 8px rgba(62, 201, 167, 0.8); // чуть больше свечения
     }
 
     &:active {
         transform: scale(1);
+        box-shadow: 0 0 4px rgba(62, 201, 167, 0.5); // минимизация свечения
     }
 }
 
