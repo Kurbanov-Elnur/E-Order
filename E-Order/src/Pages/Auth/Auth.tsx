@@ -38,7 +38,7 @@ export default function Auth() {
             <a href='#'>Forgot Password?</a>
           </div>
 
-          <Link to={'/app/search'} className='login-button'>Log in</Link>
+          <Link to={'/app/marketplace'} className='login-button'>Log in</Link>
 
           <div className='register-link'>
             <span>Don't have an account?</span> <a href='#'>Sign Up</a>

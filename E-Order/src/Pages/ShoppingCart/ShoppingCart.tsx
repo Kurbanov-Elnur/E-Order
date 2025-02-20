@@ -1,6 +1,7 @@
 import './ShoppingCart.scss';
 import { useState } from 'react';
 import React from 'react';
+import MainButtons from '../../Components/MainButtons/MainButtons';
 
 interface Product {
   brand: string;
@@ -80,6 +81,7 @@ export default function ShoppingCart() {
 
   return (
     <div className='shopping-cart'>
+      <MainButtons />
       <div className='search-container'>
         <h2>Sifarişlər səbəti</h2>
         <div className='search'>

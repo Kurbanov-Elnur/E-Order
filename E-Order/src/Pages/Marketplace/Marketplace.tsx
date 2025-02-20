@@ -2,6 +2,7 @@ import './Marketplace.scss';
 import Swiper from '../../Components/Swiper/Swiper';
 import { useState } from 'react';
 import React from 'react';
+import MainButtons from '../../Components/MainButtons/MainButtons';
 
 interface Product {
   brand: string;
@@ -67,6 +68,13 @@ const products: Product[] = [
   },
 ];
 
+const options = [
+  { value: '', label: 'Seçin' },
+  { value: 'Misal Məhsul', label: 'Misal Məhsul' },
+  { value: 'Qlobal Brend', label: 'Qlobal Brend' },
+  { value: 'Yerli Brend', label: 'Yerli Brend' }
+];
+
 export default function Marketplace() {
   const [expandedRows, setExpandedRows] = useState<string[]>([]);
   const [selectedBrand, setSelectedBrand] = useState<string>('');
@@ -126,62 +134,27 @@ export default function Marketplace() {
 
   return (
     <div className='marketplace'>
+      <MainButtons />
       <Swiper />
       <div className='search-container'>
         <h2>Nömrə və brend üzrə axtarış</h2>
-        <div style={{display: 'flex'}}>
-          <div className="select-container">
-            <select
-              value={selectedBrand}
-              onChange={(e) => setSelectedBrand(e.target.value)}
-              className="custom-select"
-            >
-              <option value="">Seçin</option>
-              <option value="Misal Məhsul">Misal Məhsul</option>
-              <option value="Qlobal Brend">Qlobal Brend</option>
-              <option value="Yerli Brend">Yerli Brend</option>
-            </select>
-            <i className="bx bx-chevron-down"></i>
-          </div>
-          <div className="select-container">
-            <select
-              value={selectedBrand}
-              onChange={(e) => setSelectedBrand(e.target.value)}
-              className="custom-select"
-            >
-              <option value="">Seçin</option>
-              <option value="Misal Məhsul">Misal Məhsul</option>
-              <option value="Qlobal Brend">Qlobal Brend</option>
-              <option value="Yerli Brend">Yerli Brend</option>
-            </select>
-            <i className="bx bx-chevron-down"></i>
-          </div>
-          <div className="select-container">
-            <select
-              value={selectedBrand}
-              onChange={(e) => setSelectedBrand(e.target.value)}
-              className="custom-select"
-            >
-              <option value="">Seçin</option>
-              <option value="Misal Məhsul">Misal Məhsul</option>
-              <option value="Qlobal Brend">Qlobal Brend</option>
-              <option value="Yerli Brend">Yerli Brend</option>
-            </select>
-            <i className="bx bx-chevron-down"></i>
-          </div>
-          <div className="select-container">
-            <select
-              value={selectedBrand}
-              onChange={(e) => setSelectedBrand(e.target.value)}
-              className="custom-select"
-            >
-              <option value="">Seçin</option>
-              <option value="Misal Məhsul">Misal Məhsul</option>
-              <option value="Qlobal Brend">Qlobal Brend</option>
-              <option value="Yerli Brend">Yerli Brend</option>
-            </select>
-            <i className="bx bx-chevron-down"></i>
-          </div>
+        <div className='selects-container'>
+          {options.map((_, index) => (
+            <div className='select-container' key={index}>
+              <select
+                value={selectedBrand}
+                onChange={(e) => setSelectedBrand(e.target.value)}
+                className='custom-select'
+              >
+                {options.map((option, optionIndex) => (
+                  <option key={optionIndex} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <i className='bx bx-chevron-down'></i>
+            </div>
+          ))}
         </div>
         <div className='search'>
           <input type='text' placeholder='İstehsalçı və ya orijinal kodu daxil edin' />
@@ -295,7 +268,7 @@ export default function Marketplace() {
                     ))}
                 </React.Fragment>
               ))}
-              <tr className="sticky-footer">
+              <tr className='sticky-footer'>
                 <td colSpan={6}></td>
                 <td><strong>Total (Miqdar): {totalQuantity}</strong></td>
                 <td><strong>Total (AZN): {totalAZN.toFixed(2)}</strong></td>

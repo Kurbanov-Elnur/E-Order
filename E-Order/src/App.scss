@@ -7,6 +7,8 @@
 }
 
 table {
+    width: max-content;
+    min-width: 100%;
     border-collapse: collapse;
     border-radius: 12px;
     background: white;
@@ -59,9 +61,9 @@ input[type="number"] {
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease;
-    width: 100%;
+    width: 120px;
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: auto;
 }
 
 .select-checkbox {

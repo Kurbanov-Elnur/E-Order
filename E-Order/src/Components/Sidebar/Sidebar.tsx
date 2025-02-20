@@ -12,7 +12,7 @@ export default function Sidebar() {
     const { t } = useTranslation("common");
 
     const sideBarItems = [
-        { name: t("Sidebar.Item-1"), path: '/search', iconClassName: 'bx bx-search' },
+        { name: t("Sidebar.Item-1"), path: '/marketplace', iconClassName: 'bx bx-search' },
         { name: t("Sidebar.Item-2"), path: '/shopping-cart', iconClassName: 'bx bx-cart' },
         { name: t("Sidebar.Item-3"), path: '/order-history', iconClassName: 'bx bx-receipt' },
         { name: t("Sidebar.Item-4"), path: '/messages', iconClassName: 'bx bx-message-square-dots' },

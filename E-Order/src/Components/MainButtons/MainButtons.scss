@@ -1,0 +1,106 @@
+.main-buttons {
+    position: absolute;
+    top: 0;
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    width: 95%;
+    gap: 15px;
+
+    .card {
+        display: flex;
+        align-items: center;
+        background: #e0e4e8;
+        border-radius: 16px;
+        padding: 10px;
+        width: 260px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .card.due {
+        animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    .card:hover,
+    .small-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .icon {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        color: white;
+        font-size: 26px;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.2);
+        position: relative;
+    }
+
+    .content {
+        margin-left: 15px;
+    }
+
+    .title {
+        color: #1c3d5a;
+        font-weight: bold;
+    }
+
+    h2 {
+        margin: 5px 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .currency {
+        color: #4CAF50;
+        font-size: 14px;
+    }
+
+    .small-card {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        border-radius: 16px;
+        padding: 15px;
+        width: 70px;
+        height: 60px;
+        justify-content: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: red;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes pulse {
+        0% {
+            background: #e0e4e8;
+        }
+
+        50% {
+            background: #ffcccb;
+            transform: scale(1.05);
+        }
+
+        100% {
+            background: #e0e4e8;
+        }
+    }
+}

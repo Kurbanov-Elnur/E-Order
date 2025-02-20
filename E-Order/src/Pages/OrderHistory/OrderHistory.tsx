@@ -1,3 +1,4 @@
+import MainButtons from '../../Components/MainButtons/MainButtons';
 import './OrderHistory.scss';
 import React from 'react';
 
@@ -29,6 +30,7 @@ const products: Product[] = [
 export default function OrderHistory() {
     return (
         <div className='order-history'>
+            <MainButtons />
             <div className='search-container'>
                 <h2>Sifariş tarixçəsi</h2>
                 <div className='search'>

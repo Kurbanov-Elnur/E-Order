@@ -13,7 +13,7 @@ $text-light: #fff;
     align-items: center;
     background-color: #2C3E50;
     gap: 1.5rem;
-    padding-top: 3rem;
+    padding-top: 9rem;
 
     .search-container {
         display: flex;
@@ -32,11 +32,15 @@ $text-light: #fff;
         }
 
         .search {
-            width: 35%;
+            width: 450px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 0.8rem;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
 
             input {
                 width: 100%;
@@ -68,44 +72,47 @@ $text-light: #fff;
                     background-color: #e6b639;
                     transform: scale(1.05);
                 }
+
+                @media (max-width: 768px) {
+                }
             }
         }
 
-        .select-container {
-            margin: 0.8rem;
-            position: relative;
-            width: 100%;
-            max-width: 250px;
+        .selects-container {
+            display: flex;
+            flex-wrap: wrap;
 
-            .custom-select {
-                width: 100%;
-                padding: 0.8rem 1rem;
-                font-size: 1rem;
-                border-radius: 10px;
-                border: 2px solid $primary-color;
-                background-color: #fff;
-                color: $text-dark;
-                outline: none;
-                appearance: none;
-                transition: border-color 0.3s ease;
+            .select-container {
+                margin: 0.8rem;
+                position: relative;
 
-                &:focus {
-                    border-color: #37b093;
+                .custom-select {
+                    width: 100%;
+                    padding: 0.8rem 1rem;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    border: 2px solid $primary-color;
+                    background-color: #fff;
+                    color: $text-dark;
+                    outline: none;
+                    appearance: none;
+                    transition: border-color 0.3s ease;
+
+                    &:focus,
+                    &:hover {
+                        border-color: #37b093;
+                    }
                 }
 
-                &:hover {
-                    border-color: #37b093;
+                .custom-select+i {
+                    position: absolute;
+                    right: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 1.2rem;
+                    color: $text-dark;
+                    pointer-events: none;
                 }
-            }
-
-            .custom-select+i {
-                position: absolute;
-                right: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 1.2rem;
-                color: $text-dark;
-                pointer-events: none;
             }
         }
 

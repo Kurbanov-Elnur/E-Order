@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import './Swiper.scss';
-import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 import ADS1 from '../../Assets/ADS/ADS-1.jpg';
 import ADS2 from '../../Assets/ADS/ADS-2.jpg';
@@ -24,7 +24,6 @@ export default function MySwiper() {
       <button className='toggle-button' onClick={toggleVisibility}>Aksiyalar və elanları göstər</button>
       <div className={`swiper ${!isVisible ? 'hidden' : ''}`} style={{ userSelect: 'none' }}>
         <Swiper
-          effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
@@ -38,11 +37,15 @@ export default function MySwiper() {
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
-          }}  
-          pagination={{
-            clickable: true, 
           }}
-          modules={[EffectCoverflow, Autoplay, Pagination]}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[Autoplay, Pagination, Navigation]}
           className='swiper-container'
         >
           {images.map((image, index) => (
@@ -51,6 +54,8 @@ export default function MySwiper() {
             </SwiperSlide>
           ))}
         </Swiper>
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
       </div>
     </div>
   );

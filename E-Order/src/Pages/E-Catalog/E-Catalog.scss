@@ -1,0 +1,97 @@
+$primary-color: #3ec9a7;
+$secondary-color: #ffcb42;
+$dark-blue: #1c3d5a;
+$light-gray: #e0e4e8;
+$text-dark: #1c3d5a;
+$text-light: #fff;
+
+.e-catalog {
+    display: flex;
+    min-height: calc(100vh - 6rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C3E50;
+    gap: 1.5rem;
+    padding-top: 9rem;
+
+    .e-catalog-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 5%;
+        width: 95%;
+        height: 120vh;
+        background-color: $light-gray;
+        border-radius: 20px;
+
+        h2 {
+            color: $text-dark;
+            font-size: 1.2rem;
+            margin: 1rem;
+        }
+
+        .swiper-container {
+            margin: 1rem;
+            width: 350px;
+
+            .slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+                
+                img{
+                    width: 200px;
+                }
+            }
+        }
+
+        .select-container {
+            margin: 0.8rem;
+            position: relative;
+            width: 200px; 
+            height: 24px;
+
+            .custom-select {
+                width: 100%;
+                padding: 0.8rem 2.5rem 0.8rem 1rem; 
+                font-size: 1rem;
+                border-radius: 10px;
+                border: 2px solid $primary-color;
+                background-color: #fff;
+                color: $text-dark;
+                outline: none;
+                appearance: none;
+                transition: border-color 0.3s ease;
+
+                &:hover {
+                    border-color: #37b093;
+                }
+            }
+
+            .custom-select:focus+i {
+                transform: rotate(180deg);
+            }
+
+            i {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                font-size: 1.5rem;
+                color: $text-dark;
+                pointer-events: none;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

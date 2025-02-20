@@ -1,7 +1,10 @@
 import App from '../App';
+import AboutBrands from '../Pages/AboutBrands/AboutBrands';
 import Auth from '../Pages/Auth/Auth';
+import ECatalog from '../Pages/E-Catalog/E-Catalog';
 import Marketplace from '../Pages/Marketplace/Marketplace';
 import OrderHistory from '../Pages/OrderHistory/OrderHistory';
+import PromotionsAnnouncements from '../Pages/PromotionsAnnouncements/PromotionsAnnouncements';
 import ShoppingCart from '../Pages/ShoppingCart/ShoppingCart';
 import PrivateRoute from './PrivateRoute';
 
@@ -10,7 +13,7 @@ const hasPermission = true;
 
 const appRoutes = [
     {
-        path: 'search',
+        path: 'marketplace',
         element: <Marketplace />,
     },
     {
@@ -27,15 +30,15 @@ const appRoutes = [
     },
     {
         path: 'promotions-announcements',
-        element: <Marketplace />,
+        element: <PromotionsAnnouncements />,
     },
     {
         path: 'about-brands',
-        element: <Marketplace />,
+        element: <AboutBrands />,
     },
     {
         path: 'e-catalog',
-        element: <Marketplace />,
+        element: <ECatalog />,
     },
     {
         path: 'information',
