@@ -1,14 +1,14 @@
 {
   "Auth": {
     "Welcome": "Добро пожаловать!",
-    "SignIn": "Войдите в личный кабинет",
+    "SignInDesc": "Войдите в личный кабинет",
+    "SignIn": "Войти",
     "SignUp": "Зарегистрироваться",
     "Username": "Имя пользователя",
     "Password": "Пароль",
     "FirstName": "Имя",
     "LastName": "Фамилия",
     "Email": "Электронная почта",
-    "PhoneNumber": "Номер телефона",
     "Description": "Описание",
     "RememberMe": "Запомнить Меня",
     "ForgotPassword": "Забыли пароль?",

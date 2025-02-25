@@ -4,6 +4,11 @@
     left: 4.2rem;
     top: 3rem;
     width: calc(100% - 4.2rem);
+
+    @media (max-width: 550px) {
+        left: 0;
+        width: 100%;
+    }
 }
 
 table {

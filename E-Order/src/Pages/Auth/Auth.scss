@@ -72,6 +72,7 @@
             .forgot-password {
                 align-self: flex-end;
                 margin-top: -10px;
+                cursor: pointer;
 
                 a {
                     font-size: 14px;
@@ -81,12 +82,14 @@
 
                     &:hover {
                         color: #1d4ed8;
-                        text-decoration: underline;
                     }
                 }
             }
 
             .login-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 100%;
                 padding: 12px;
                 border: none;
@@ -109,12 +112,18 @@
                     background-color: #1e40af;
                     transform: translateY(0);
                 }
+
+                .btnAnimation {
+                    width: 100px;
+                    height: 100px;
+                }
             }
 
             .register-link {
                 margin-top: 10px;
                 font-size: 14px;
                 color: #6b7280;
+                cursor: pointer;
 
                 a {
                     color: #133E49;
@@ -124,7 +133,6 @@
 
                     &:hover {
                         color: #1d4ed8;
-                        text-decoration: underline;
                     }
                 }
             }
@@ -136,5 +144,16 @@
         background-image: url('../../Assets/Images/AuthBackground.png');
         background-size: cover;
         background-position: center;
+    }
+
+    @media (max-width: 768px) {
+
+        .left {
+            width: 100vw;
+        }
+
+        .right {
+            display: none;
+        }
     }
 }

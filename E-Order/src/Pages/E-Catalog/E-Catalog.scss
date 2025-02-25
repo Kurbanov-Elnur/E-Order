@@ -15,6 +15,10 @@ $text-light: #fff;
     gap: 1.5rem;
     padding-top: 9rem;
 
+    @media (max-width: 768px) {
+        padding-top: 22rem;
+    }
+
     .e-catalog-container {
         display: flex;
         flex-direction: column;

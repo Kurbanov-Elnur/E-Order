@@ -1,14 +1,14 @@
 {
     "Auth": {
         "Welcome": "Xoş gəlmisiniz!",
-        "SignIn": "Şəxsi kabinetinizə daxil olun",
+        "SignInDesc": "Şəxsi kabinetinizə daxil olun",
+        "SignIn": "Daxil ol",
         "SignUp": "Qeydiyyatdan Keçin",
         "Username": "İstifadəçi adı",
         "Password": "Şifrə",
-        "FirstName": "Ad",
-        "LastName": "Soyad",
+        "FirstName": "Adınız",
+        "LastName": "Soyadınız",
         "Email": "E-poçt",
-        "PhoneNumber": "Telefon nömrəsi",
         "Description": "Mətn",
         "RememberMe": "Məni Yadda Saxla",
         "ForgotPassword": "Şifrəni Unutmusunuz?",

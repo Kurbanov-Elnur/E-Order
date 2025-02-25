@@ -2,6 +2,7 @@ import App from '../App';
 import AboutBrands from '../Pages/AboutBrands/AboutBrands';
 import Auth from '../Pages/Auth/Auth';
 import ECatalog from '../Pages/E-Catalog/E-Catalog';
+import Info from '../Pages/Info/Info';
 import Marketplace from '../Pages/Marketplace/Marketplace';
 import OrderHistory from '../Pages/OrderHistory/OrderHistory';
 import PromotionsAnnouncements from '../Pages/PromotionsAnnouncements/PromotionsAnnouncements';
@@ -42,7 +43,7 @@ const appRoutes = [
     },
     {
         path: 'information',
-        element: <Marketplace />,
+        element: <Info />,
     },
     {
         path: 'outlet',

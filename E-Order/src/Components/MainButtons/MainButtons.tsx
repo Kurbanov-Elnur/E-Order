@@ -23,16 +23,18 @@ export default function MainButtons() {
                     <span className="currency">0 $</span>
                 </div>
             </div>
-            <div className="small-card">
-                <div className="icon" style={{ backgroundColor: "#FF9800" }}>
-                    <i className='bx bx-envelope'></i>
-                    <span className="badge">0</span>
+            <div style={{ display: "flex", gap: "0.5rem" }}>
+                <div className="small-card">
+                    <div className="icon" style={{ backgroundColor: "#FF9800" }}>
+                        <i className='bx bx-envelope'></i>
+                        <span className="badge">0</span>
+                    </div>
                 </div>
-            </div>
-            <div className="small-card">
-                <div className="icon" style={{ backgroundColor: "#E91E63" }}>
-                    <i className='bx bx-heart'></i>
-                    <span className="badge">7</span>
+                <div className="small-card">
+                    <div className="icon" style={{ backgroundColor: "#E91E63" }}>
+                        <i className='bx bx-heart'></i>
+                        <span className="badge">7</span>
+                    </div>
                 </div>
             </div>
         </div>

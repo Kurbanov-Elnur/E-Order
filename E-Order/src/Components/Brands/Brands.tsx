@@ -25,15 +25,6 @@ const brandData = [
     { name: "Nike", logo: brand1 },
     { name: "Adidas", logo: brand2 },
     { name: "Puma", logo: brand3 },
-    { name: "Nike", logo: brand1 },
-    { name: "Adidas", logo: brand2 },
-    { name: "Puma", logo: brand3 },
-    { name: "Nike", logo: brand1 },
-    { name: "Adidas", logo: brand2 },
-    { name: "Puma", logo: brand3 },
-    { name: "Nike", logo: brand1 },
-    { name: "Adidas", logo: brand2 },
-    { name: "Puma", logo: brand3 },
 ];
 
 export default function Brands() {
@@ -45,7 +36,8 @@ export default function Brands() {
                     <div key={index} className="brand-card">
                         <img src={brand.logo} alt={brand.name} />
                         <div className="brand-info">
-                            <h3>{brand.name}</h3>
+                            <p>{brand.name}</p>
+                            <button>Info<i className='bx bx-right-arrow-alt'></i></button>
                         </div>
                     </div>
                 ))}
