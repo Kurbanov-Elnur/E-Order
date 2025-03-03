@@ -42,11 +42,8 @@ export default function LanguageSwitcher() {
   return (
     <div className="language-switcher">
       <div className="switcher">
-        <button
-          onClick={handleClick}
-          className="language-button"
-        >
-          <span className="selected-language"><i className='bx bx-world'></i></span>
+        <button onClick={handleClick} className="language-button">
+          <span className="selected-language">{selectedLanguage}</span>
         </button>
 
         {anchorEl && (

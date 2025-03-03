@@ -2,8 +2,9 @@
   "Auth": {
     "Welcome": "Welcome!",
     "SignInDesc": "Log in to your personal account",
+    "SignUpDesc": "Your request will be reviewed soon, and you will be contacted.",
     "SignIn": "Sign In",
-    "SignUp": "Sign Up",
+    "SignUp": "Send",
     "Username": "Username",
     "Password": "Password",
     "FirstName": "Name",
@@ -13,6 +14,7 @@
     "RememberMe": "Remember Me",
     "ForgotPassword": "Forgot Password?",
     "NoAccountText": "Don't have an account?",
+    "NoAccountBtn": "Send request",
     "HasAccountText": "Already have an account?"
   },
   "Sidebar": {

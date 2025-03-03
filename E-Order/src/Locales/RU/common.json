@@ -2,8 +2,9 @@
   "Auth": {
     "Welcome": "Добро пожаловать!",
     "SignInDesc": "Войдите в личный кабинет",
+    "SignUpDesc": "Ваш запрос будет рассмотрен в ближайшее время, и с вами свяжутся.",
     "SignIn": "Войти",
-    "SignUp": "Зарегистрироваться",
+    "SignUp": "Отправить",
     "Username": "Имя пользователя",
     "Password": "Пароль",
     "FirstName": "Имя",
@@ -14,6 +15,7 @@
     "ForgotPassword": "Забыли пароль?",
     "Video": "Как получить API-ключи на Binance?",
     "NoAccountText": "Нет аккаунта?",
+    "NoAccountBtn": "Отправить запрос",
     "HasAccountText": "Уже есть аккаунт?"
   },
   "Sidebar": {

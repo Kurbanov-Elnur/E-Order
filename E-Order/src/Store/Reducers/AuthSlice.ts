@@ -18,7 +18,7 @@ const initialState: AuthData = {
         FirstName: '',
         LastName: '',
         Email: '',
-        PhoneNumber: '',
+        PhoneNumber: '+994 ',
         Description: '',
     },
     isRegister: false,

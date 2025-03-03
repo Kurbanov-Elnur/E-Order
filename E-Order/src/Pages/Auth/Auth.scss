@@ -121,20 +121,23 @@
 
             .register-link {
                 margin-top: 10px;
-                font-size: 14px;
+                font-size: 16px;
                 color: #6b7280;
                 cursor: pointer;
 
-                a {
-                    color: #133E49;
+                button {
+                    color: red;
+                    border: none;
+                    cursor: pointer;
+                    background-color: transparent;
                     text-decoration: none;
                     font-weight: bold;
-                    transition: color 0.3s ease;
-
+                    transition: color 0.3s ease, transform 0.3s ease;
+                
                     &:hover {
-                        color: #1d4ed8;
+                        transform: scale(1.2);
                     }
-                }
+                }                
             }
         }
     }
@@ -147,7 +150,6 @@
     }
 
     @media (max-width: 768px) {
-
         .left {
             width: 100vw;
         }

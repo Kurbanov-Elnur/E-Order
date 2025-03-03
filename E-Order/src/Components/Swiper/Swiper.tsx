@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import './Swiper.scss';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 
 import ADS1 from '../../Assets/ADS/ADS-1.jpg';
 import ADS2 from '../../Assets/ADS/ADS-2.jpg';
@@ -28,6 +28,7 @@ export default function MySwiper() {
           centeredSlides={true}
           loop={true}
           slidesPerView={'auto'}
+          effect="coverflow"
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -45,7 +46,7 @@ export default function MySwiper() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
           className='swiper-container'
         >
           {images.map((image, index) => (
@@ -54,8 +55,8 @@ export default function MySwiper() {
             </SwiperSlide>
           ))}
         </Swiper>
-          <div className="swiper-button-next"></div>
-          <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
       </div>
     </div>
   );

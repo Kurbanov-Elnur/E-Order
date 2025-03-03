@@ -28,19 +28,139 @@ const products: Product[] = [
     quantity: 5,
     priceAZN: '25 AZN',
     priceUSD: '15 USD',
-    alternatives: [
-      {
-        brand: 'Misal Məhsul',
-        code: '54321',
-        name: 'Avtomobil yağı',
-        car: 'BMW 3 Series',
-        originalCode: 'OP54321',
-        status: 'Aktiv',
-        quantity: 2,
-        priceAZN: '30 AZN',
-        priceUSD: '18 USD',
-      },
-    ],
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
+  },
+  {
+    brand: 'Misal Məhsul',
+    code: '12345',
+    name: 'Avtomobil yağı',
+    car: 'Opel Astra',
+    originalCode: 'OP12345',
+    status: 'Aktiv',
+    quantity: 5,
+    priceAZN: '25 AZN',
+    priceUSD: '15 USD',
+    alternatives: [],
   },
   {
     brand: 'Qlobal Brend',
@@ -162,7 +282,7 @@ export default function Marketplace() {
         </div>
         <h3>Axtarış nəticələri</h3>
         <div className='results-table'>
-          <table>
+          <table style={{ minWidth: '1250px' }}>
             <thead>
               <tr>
                 <th>İstehsalçı (Brend)</th>
@@ -170,12 +290,12 @@ export default function Marketplace() {
                 <th>Məhsulun adı</th>
                 <th>Avto</th>
                 <th>Məhsulun orijinal kodu</th>
-                <th>Status</th>
-                <th>Miqdar</th>
-                <th>Ədəd qiyməti(AZN)</th>
-                <th>Ədəd qiyməti(USD)</th>
-                <th>Alternativlər</th>
-                <th>Seç</th>
+                <th style={{ width: '80px' }}>Status</th>
+                <th style={{ width: '80px' }}>Miqdar</th>
+                <th>Ədəd qiyməti (AZN)</th>
+                <th>Ədəd qiyməti (USD)</th>
+                <th style={{ width: '60px' }}>Alt-lər</th>
+                <th style={{ width: '60px' }}>Seç</th>
               </tr>
             </thead>
             <tbody>
@@ -201,7 +321,7 @@ export default function Marketplace() {
                     <td>{product.priceAZN}</td>
                     <td>{product.priceUSD}</td>
                     <td>
-                      {product.alternatives && (
+                      {product.alternatives?.length != 0 && (
                         <i
                           onClick={() => toggleAlternative(product.code)}
                           style={{ color: expandedRows.includes(product.code) ? '#4CAF50' : '#E53935' }}
@@ -213,16 +333,7 @@ export default function Marketplace() {
                         ></i>
                       )}
                     </td>
-                    <td>
-                      <input
-                        type='checkbox'
-                        id={`select-${product.code}`}
-                        className='select-checkbox'
-                      />
-                      <label htmlFor={`select-${product.code}`}>
-                        <i className='bx bx-check-circle'></i>
-                      </label>
-                    </td>
+                    <td><i></i></td>
                   </tr>
                   {expandedRows.includes(product.code) &&
                     product.alternatives &&
@@ -254,26 +365,18 @@ export default function Marketplace() {
                         <td>{altProduct.priceAZN}</td>
                         <td>{altProduct.priceUSD}</td>
                         <td></td>
-                        <td>
-                          <input
-                            type='checkbox'
-                            id={`select-${altProduct.code}`}
-                            className='select-checkbox'
-                          />
-                          <label htmlFor={`select-${altProduct.code}`}>
-                            <i className='bx bx-check-circle'></i>
-                          </label>
-                        </td>
+                        <td><i></i></td>
                       </tr>
                     ))}
                 </React.Fragment>
               ))}
-              <tr className='sticky-footer'>
-                <td colSpan={6}></td>
+            </tbody>
+            <tfoot style={{ position: 'sticky', bottom: '0' }}>
+              <tr>
+                <td colSpan={7}></td>
                 <td><strong>Total (Miqdar): {totalQuantity}</strong></td>
                 <td><strong>Total (AZN): {totalAZN.toFixed(2)}</strong></td>
                 <td><strong>Total (USD): {totalUSD.toFixed(2)}</strong></td>
-                <td><button>Səbətə at</button></td>
                 <td>
                   <i
                     className={`bx ${selectAll ? 'bx-check-circle' : 'bx-circle'}`}
@@ -282,7 +385,12 @@ export default function Marketplace() {
                   ></i>
                 </td>
               </tr>
-            </tbody>
+              <tr >
+                <td colSpan={7}></td>
+                <td colSpan={3}><button>Səbətə at</button></td>
+                <td></td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

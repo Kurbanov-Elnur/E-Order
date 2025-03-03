@@ -2,8 +2,9 @@
     "Auth": {
         "Welcome": "Xoş gəlmisiniz!",
         "SignInDesc": "Şəxsi kabinetinizə daxil olun",
+        "SignUpDesc": "Müraciətiniz yaxın zamanda baxılacaq və sizinlə əlaqə saxlanacaq.",
         "SignIn": "Daxil ol",
-        "SignUp": "Qeydiyyatdan Keçin",
+        "SignUp": "Göndər",
         "Username": "İstifadəçi adı",
         "Password": "Şifrə",
         "FirstName": "Adınız",
@@ -14,6 +15,7 @@
         "ForgotPassword": "Şifrəni Unutmusunuz?",
         "Video": "Binancedən API açarlarını necə əldə etmək olar?",
         "NoAccountText": "Hesabınız Yoxdur?",
+        "NoAccountBtn": "Sorğu göndər",
         "HasAccountText": "Artıq hesabınız var?"
     },
     "Sidebar": {

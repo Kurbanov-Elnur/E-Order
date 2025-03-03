@@ -12,22 +12,24 @@
 }
 
 table {
-    width: max-content;
-    min-width: 100%;
+    width: 98%;
     border-collapse: collapse;
     border-radius: 12px;
     background: white;
-    margin: 1rem;
     table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 thead {
+    position: sticky;
+    top: 0;
     background-color: #1c3d5a;
     color: #fff;
 }
 
 thead th {
-    padding: 1rem;
+    padding: 0.3rem;
     font-weight: bold;
     text-align: center;
     font-size: 1rem;
@@ -51,7 +53,6 @@ tbody {
 }
 
 tbody td {
-    padding: 0.5rem;
     font-size: 0.95rem;
     color: #1c3d5a;
     word-wrap: break-word;
@@ -59,33 +60,26 @@ tbody td {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+tfoot {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-align: center;
+}
+
+tfoot td {
+    font-size: 1rem;
+    color: #1c3d5a;
+}
+
 input[type="number"] {
-    padding: 0.5rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
     border: 2px solid #3ec9a7;
     border-radius: 10px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease;
-    width: 120px;
+    width: 70px;
     box-sizing: border-box;
     max-width: auto;
-}
-
-.select-checkbox {
-    display: none;
-}
-
-.select-checkbox+label {
-    font-size: 1.5rem;
-    color: red;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.select-checkbox:checked+label i {
-    color: #37b093;
-}
-
-.select-checkbox+label i {
-    font-size: 1.5rem;
 }

@@ -25,7 +25,7 @@ $text-light: #fff;
         justify-content: center;
         align-items: flex-start;
         margin-bottom: 5%;
-        width: 95%;
+        width: 97%;
         background-color: $light-gray;
         border-radius: 20px;
 
@@ -36,7 +36,7 @@ $text-light: #fff;
         }
 
         .search {
-            width: 450px;
+            width: 70%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -48,7 +48,7 @@ $text-light: #fff;
 
             input {
                 width: 100%;
-                padding: 0.8rem;
+                padding: 0.3rem;
                 border: 2px solid $primary-color;
                 border-radius: 10px;
                 outline: none;
@@ -62,8 +62,7 @@ $text-light: #fff;
 
             button {
                 width: 100px;
-                height: 50px;
-                padding: 0.8rem;
+                padding: 0.5rem;
                 background-color: $secondary-color;
                 color: $text-dark;
                 font-weight: bold;
@@ -73,26 +72,31 @@ $text-light: #fff;
                 border-radius: 10px;
 
                 &:hover {
-                    background-color: #e6b639;
-                    transform: scale(1.05);
+                    transform: translateY(-2px);
+                }
+    
+                &:active {
+                    transform: translateY(1px);
                 }
 
-                @media (max-width: 768px) {
-                }
+                @media (max-width: 768px) {}
             }
         }
 
         .selects-container {
             display: flex;
             flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-left: 0.8rem;
+            width: 100%;
 
             .select-container {
-                margin: 0.8rem;
                 position: relative;
+                width: 22%;
 
                 .custom-select {
                     width: 100%;
-                    padding: 0.8rem 1rem;
+                    padding: 0.3rem 1rem;
                     font-size: 1rem;
                     border-radius: 10px;
                     border: 2px solid $primary-color;
@@ -102,6 +106,12 @@ $text-light: #fff;
                     appearance: none;
                     transition: border-color 0.3s ease;
 
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: block;
+
+
                     &:focus,
                     &:hover {
                         border-color: #37b093;
@@ -110,7 +120,7 @@ $text-light: #fff;
 
                 .custom-select+i {
                     position: absolute;
-                    right: 1rem;
+                    right: 0;
                     top: 50%;
                     transform: translateY(-50%);
                     font-size: 1.2rem;
@@ -131,7 +141,7 @@ $text-light: #fff;
         .results-table {
             width: 100%;
             overflow-x: auto;
-            max-height: 30rem;
+            max-height: 32rem;
             overflow-y: auto;
 
             .icon {
@@ -147,20 +157,38 @@ $text-light: #fff;
             }
         }
 
-        .results-table::-webkit-scrollbar {
-            display: none;
+        .results-table::-webkit-scrollbar-track {
+            background: white;
         }
 
-        .sticky-footer {
-            position: sticky;
-            bottom: 0;
+        tfoot {
             background-color: #fff;
-            z-index: 10;
+            font-size: 0.95rem;
+            color: #1c3d5a;
+            word-wrap: break-word;
+
+            i {
+                font-size: 32px;
+                color: #4CAF50;
+                cursor: pointer;
+                transition: transform 0.3s ease, color 0.3s ease;
+
+                &:hover {
+                    color: #388E3C;
+                    transform: scale(1.2);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
 
             button {
+                width: 90%;
                 background-color: #4CAF50;
                 color: white;
-                padding: 12px 20px;
+                padding: 8px 14px;
+                margin: 1%;
                 border: none;
                 border-radius: 8px;
                 font-size: 16px;
@@ -182,22 +210,6 @@ $text-light: #fff;
                 background-color: #ccc;
                 cursor: not-allowed;
                 box-shadow: none;
-            }
-
-            i {
-                font-size: 32px;
-                color: #4CAF50;
-                cursor: pointer;
-                transition: transform 0.3s ease, color 0.3s ease;
-
-                &:hover {
-                    color: #388E3C;
-                    transform: scale(1.2);
-                }
-
-                &:active {
-                    transform: scale(0.95);
-                }
             }
         }
     }
